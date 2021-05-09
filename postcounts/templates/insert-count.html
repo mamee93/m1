@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+   <section class="countdown2 cid-swQzdPciGM mbr-fullscreen" id="countdown2-4">
+    
+    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(255, 255, 255);">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-2">
+                    <strong>مليونية الصلاة على النبي</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mb-5 align-center mbr-fonts-style display-7">
+                    ادخل عدد مرات الصلاة على النبي 
+                </h4>
+                <div class="countdown-cont align-center mb-5">
+                     
+                    <div class="countdown" data-due-date="2021/01/01"></div>
+                </div>
+                <p class="mbr-text mb-5 align-center mbr-fonts-style display-7">
+                     ادخل عدد مرات الصلاة على النبي .
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mx-auto mbr-form" data-form-type="formoid">
+                <form action="" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="baa2OpqWBhvVwKdc6B4cV5mzorNid2f6SDTa/lDwxTLILl7a29EkBLTGanOjXXj3NXh8drnFIol/pTNaDbLuIIkpHosowdGMcPkzpSSEVMEc7PpRBPclTK4ptETkSwD1">
+                   {% csrf_token %}
+                    <div class="">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                    </div>
+                    {% bootstrap_form form %}
+                   <input  type="submit" class=" btn btn-warning  form-control" required="required" value="submit">  
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+ {% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% load static %}
+
+ {% load bootstrap4 %}
+ {% block content %}
+ 
+   <section class="countdown2 cid-swQzdPciGM mbr-fullscreen" id="countdown2-4">
+    
+    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(255, 255, 255);">
+    </div>
+    <div class="container">
+         
+          <h1>Register</h1>
+            <hr>
+            <form method="POST" >
+            {% csrf_token %}
+            {% bootstrap_form form %}
+         
+            <input  type="submit" class=" btn btn-warning  form-control" required="required" value="Register">
+            </form>
+  <hr>
+           <p>Already have an account? <<a href="{% url 'login' %}">Login</a></p>
+       
+    </div>
+ 
+ {% endblock content %}
